@@ -67,7 +67,7 @@ pipeline {
           sh 'git remote set-url origin https://$GIT_TOKEN@github.com/sidd-harth/test-cd.git'
           sh 'git checkout feature'
           sh 'git add -A'
-          sh 'git commit -am "Updated new image version for VERSION - $VERSION'
+          sh 'git commit -am "Updated new image version for VERSION - $VERSION"'
           sh 'git push origin feature'
         }
       }
