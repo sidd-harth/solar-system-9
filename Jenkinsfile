@@ -16,13 +16,13 @@ pipeline {
       }
     }
 
-//   stages {
-//     stage('Build Image') {
-//       steps {
-//             sh "docker build -t ${NAME} ."
-//             sh "docker tag ${NAME}:latest ${IMAGE_REPO}/${NAME}:${VERSION}"
-//       }
-//     }
+  stages {
+    stage('Build Image') {
+      steps {
+            sh "docker build -t ${NAME} ."
+            sh "docker tag ${NAME}:latest ${IMAGE_REPO}/${NAME}:${VERSION}"
+      }
+    }
 
 //     stage('Push Image') {
 //       steps {
