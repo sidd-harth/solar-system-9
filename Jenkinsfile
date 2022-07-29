@@ -67,7 +67,7 @@ pipeline {
           sh 'git remote set-url origin https://$GIT_TOKEN@github.com/sidd-harth/test-cd.git'
           sh 'git checkout feature'
           sh 'git add -A'
-          sh 'git commit -am "Updated new image version for GIT COMMIT - ""$GIT_COMMIT"""'
+          sh 'git commit -am "Updated new image version for VERSION - $VERSION'
           sh 'git push origin feature'
         }
       }
@@ -79,7 +79,7 @@ pipeline {
         dir("test-cd/jenkins-demo") {
           sh 'gh auth login -h github.com  -p https --with-token < /home/devsecops/token.txt'
           sh 'gh auth status'
-          sh 'gh pr create -a @me --title "Updated Image Version" --body "Updated Solar System - $VERSION"  -B main'
+          sh 'gh pr create -a @me --title "Updated Image Version - $VERSION" --body "Planets Updated in Solar System - $VERSION"  -B main'
         }
       }
     }
