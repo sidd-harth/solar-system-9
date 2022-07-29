@@ -11,7 +11,7 @@ echo '<!DOCTYPE html>
       </style>
    </head>
    <body style="background-color:black;">
-      <img src="images/solar-system-6.png" alt="Nature" class="responsive" width="600" height="400">
+      <img src="images/solar-system-9.png" alt="Nature" class="responsive" width="600" height="400">
    </body>
 </html>
 ';
