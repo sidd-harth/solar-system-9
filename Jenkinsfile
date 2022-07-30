@@ -31,7 +31,7 @@ pipeline {
       }
     }
 
-    stage('Clone Repo') {
+    stage('Clone/Pull Repo') {
       steps {
         script {
           if (fileExists('test-cd')) {
@@ -43,6 +43,7 @@ pipeline {
             }
 
           } else {
+            echo 'Repo does not exists - Cloning the repo'
             sh 'git clone -b feature https://github.com/sidd-harth/test-cd.git'
           }
         }
