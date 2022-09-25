@@ -23,7 +23,7 @@ echo '<!DOCTYPE html>
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: url("http://139.59.21.103:3000/siddharth/solar-system/raw/branch/main/images/bg.gif");
+			background: url("http://139.59.21.103:3000/siddharth/solar-system/raw/branch/main/images/background.png");
 		}
 		
 /* 		.shadow {
