@@ -18,8 +18,8 @@ pipeline {
 
     stage('Build Image') {
       steps {
-            sh "sudo docker build -t ${NAME} ."
-            sh "sudo docker tag ${NAME}:latest ${IMAGE_REPO}/${NAME}:${VERSION}"
+            sh "docker build -t ${NAME} ."
+            sh "docker tag ${NAME}:latest ${IMAGE_REPO}/${NAME}:${VERSION}"
         }
       }
 
