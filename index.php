@@ -5,7 +5,7 @@ echo '<!DOCTYPE html>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
 		#solar-system {
-		   background: url("https://raw.githubusercontent.com/sidd-harth/planets/main/images/9.png")   center center;
+		   background: url("http://139.59.21.103:3000/siddharth/solar-system/raw/branch/main/images/9.png")   center center;
            background-repeat: no-repeat;			  
 		   background-size: cover;
 		   content: "";
@@ -23,7 +23,7 @@ echo '<!DOCTYPE html>
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: url("https://raw.githubusercontent.com/sidd-harth/planets/main/images/bg.png");
+			background: url("http://139.59.21.103:3000/siddharth/solar-system/raw/branch/main/images/background.gif");
 		}
 		
 /* 		.shadow {
