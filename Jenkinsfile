@@ -10,16 +10,6 @@ pipeline {
   }
   
   stages {
-
-        stage('ttt PR') {
-
-      steps {
-        
-          sh "pwd"
-          sh "bash pr.sh"
-        
-      }
-    }
     stage('Unit Tests') {
       steps {
         echo 'Implement unit tests if applicable.'
@@ -62,7 +52,6 @@ pipeline {
     }
     
     stage('Update Manifest') {
-
       steps {
         dir("gitops-argocd/jenkins-demo") {
           sh 'sed -i "s#siddharth67.*#${IMAGE_REPO}/${NAME}:${VERSION}#g" deployment.yaml'
@@ -72,7 +61,6 @@ pipeline {
     }
 
     stage('Commit & Push') {
-
       steps {
         dir("gitops-argocd/jenkins-demo") {
           sh "git config --global user.email 'jenkins@ci.com'"
@@ -86,12 +74,8 @@ pipeline {
     }
 
     stage('Raise PR') {
-
       steps {
-        dir("gitops-argocd/jenkins-demo") {
-          sh "pwd"
-          sh "bash pr.sh"
-        }
+        sh "bash pr.sh"
       }
     } 
   }
