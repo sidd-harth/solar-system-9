@@ -64,7 +64,7 @@ pipeline {
     stage('Commit & Push') {
 
       steps {
-        dir("solar-system/jenkins-demo") {
+        dir("gitops-argocd/jenkins-demo") {
           sh 'git remote set-url origin http://139.59.21.103:3000/siddharth/gitops-argocd'
           sh 'git checkout feature-gitea'
           sh 'git add -A'
@@ -77,7 +77,7 @@ pipeline {
     stage('Raise PR') {
 
       steps {
-        dir("solar-system/jenkins-demo") {
+        dir("gitops-argocd/jenkins-demo") {
           sh "bash pr.sh"
         }
       }
