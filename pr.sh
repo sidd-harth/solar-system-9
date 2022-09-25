@@ -2,7 +2,7 @@ echo "Opening a Pull Request"
 
 echo "Script: - Build number: $BUILD_NUMBER"
 echo "Script: - Token $ARGOCD_TOKEN"
-echo 'authorization: $ARGOCD_TOKEN' 
+echo "authorization: $ARGOCD_TOKEN" 
  
 
 curl -X 'POST' \
