@@ -34,11 +34,11 @@ pipeline {
     stage('Clone/Pull Repo') {
       steps {
         script {
-          if (fileExists('solar-system')) {
+          if (fileExists('gitops-argocd')) {
 
             echo 'Cloned repo already exists - Pulling latest changes'
 
-            dir("solar-system") {
+            dir("gitops-argocd") {
               sh 'git pull'
             }
 
