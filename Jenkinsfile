@@ -53,7 +53,7 @@ pipeline {
     stage('Update Manifest') {
 
       steps {
-        dir("solar-system/jenkins-demo") {
+        dir("gitops-argocd/jenkins-demo") {
           sh "git config --global user.email 'ci@ci.com'"
           sh 'sed -i "s#siddharth67.*#${IMAGE_REPO}/${NAME}:${VERSION}#g" deployment.yaml'
           sh 'cat deployment.yaml'
