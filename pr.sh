@@ -11,9 +11,9 @@ curl -X 'POST' \
     "siddharth"
   ],
   "base": "main",
-  "body": "body22",
+  "body": "Updated deployment specification with a new image version. For Reference Jenkins_Build_ID-GIT_COMMIT_ID - $VERSION",
   "head": "feature-gitea",
-  "title": "title22"
+  "title": "Updated Solar System Image"
 }'
 
 echo "Success"
