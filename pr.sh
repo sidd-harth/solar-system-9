@@ -11,9 +11,9 @@ curl -X 'POST' \
     "siddharth"
   ],
   "base": "main",
-  "body": "body",
-  "head": "f2",
-  "title": "title"
+  "body": "body22",
+  "head": "feature-gitea",
+  "title": "title22"
 }'
 
 echo "Success"
