@@ -54,7 +54,6 @@ pipeline {
 
       steps {
         dir("gitops-argocd/jenkins-demo") {
-          sh "git config --global user.email 'ci@ci.com'"
           sh 'sed -i "s#siddharth67.*#${IMAGE_REPO}/${NAME}:${VERSION}#g" deployment.yaml'
           sh 'cat deployment.yaml'
         }
@@ -65,6 +64,7 @@ pipeline {
 
       steps {
         dir("gitops-argocd/jenkins-demo") {
+          sh "git config --global user.email 'jenkins@ci.com'"
           sh 'git remote set-url origin http://139.59.21.103:3000/siddharth/gitops-argocd'
           sh 'git checkout feature-gitea'
           sh 'git add -A'
